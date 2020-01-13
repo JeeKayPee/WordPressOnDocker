@@ -1,41 +1,13 @@
 Run the following commands on the terminal
 
 docker pull wordpress
-docker pull mysql
+docker pull mysql:5.7
+
+In the folder where stack.yml is stored, run the following command
+Run docker stack deploy -c stack.yml wordpress 
+(or docker-compose -f stack.yml up),
 
 
-version: '3.1'
+wait for it to initialize completely, 
 
-services:
-
-  wordpress:
-    image: wordpress
-    restart: always
-    ports:
-      - 8080:80
-    environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: exampleuser
-      WORDPRESS_DB_PASSWORD: examplepass
-      WORDPRESS_DB_NAME: exampledb
-    volumes:
-      - wordpress:/var/www/html
-
-  db:
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_DATABASE: exampledb
-      MYSQL_USER: exampleuser
-      MYSQL_PASSWORD: examplepass
-      MYSQL_RANDOM_ROOT_PASSWORD: '1'
-    volumes:
-      - db:/var/lib/mysql
-
-volumes:
-  wordpress:
-  db:
-
-
-
-Run docker stack deploy -c stack.yml wordpress (or docker-compose -f stack.yml up), wait for it to initialize completely, and visit http://swarm-ip:8080, http://localhost:8080, or http://host-ip:8080 (as appropriate).
+and visit http://swarm-ip:8080, http://localhost:8080, or http://host-ip:8080 (as appropriate).
