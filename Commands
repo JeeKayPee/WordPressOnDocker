@@ -1,0 +1,5 @@
+Run the following commands on the terminal
+
+docker pull wordpress
+docker pull mysql
+
