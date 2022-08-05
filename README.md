@@ -16,3 +16,8 @@ wait for it to initialize completely,
 
  http://localhost:8080
 
+
+
+git clone https://github.com/JeeKayPee/WordPressOnDocker.git
+cd WordPressOnDocker
+sh deploy.sh
