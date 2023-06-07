@@ -2,6 +2,12 @@
 
 This guide explains how to run Wordpress on Docker. 
 
+
+git clone <<this repo link>>
+cd <<folder name>>
+sh deploy.sh
+ 
+
 Run the following commands on the terminal
 
 docker pull wordpress
