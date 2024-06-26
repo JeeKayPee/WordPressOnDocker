@@ -1,7 +1,7 @@
 services:
 
   wordpress: 
-    image: wordpress:6.55 # Prestashop - for WP check CSE Code after checkin
+    image: wordpress:6.5.5 # Prestashop - for WP check CSE Code after checkin
     restart: always
     ports:
       - 8080:80
